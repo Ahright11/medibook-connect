@@ -165,6 +165,25 @@ export const siteConfig = {
   calEmbedUrl: "https://cal.com/your-username/consultation",
   formWebhookUrl: "https://your-webhook-url.com/booking",
   
+  // Available time slots (24h format)
+  timeSlots: [
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "12:30", "14:00", "14:30", "15:00", "15:30",
+    "16:00", "16:30", "17:00", "17:30", "18:00", "18:30",
+    "19:00", "19:30", "20:00"
+  ],
+  
+  // Days that are NOT available (0 = Sunday, 6 = Saturday)
+  unavailableDays: [0], // Sunday closed
+  
+  // Specific dates that are fully booked or holidays (YYYY-MM-DD format)
+  blockedDates: [
+    "2025-03-25", // National Holiday
+    "2025-04-18", // Good Friday
+    "2025-04-21", // Easter Monday
+    "2025-05-01", // Labor Day
+  ],
+  
   // SEO
   seo: {
     title: "Δρ. Γιώργος Παπαδόπουλος | Φυσικοθεραπευτής Αθήνα",
