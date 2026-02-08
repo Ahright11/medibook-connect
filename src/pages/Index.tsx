@@ -22,8 +22,8 @@ const Index = () => {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.address,
-      "addressLocality": "Αθήνα",
-      "addressCountry": "GR"
+      "addressLocality": siteConfig.city,
+      "addressCountry": siteConfig.country
     },
     "telephone": siteConfig.phone,
     "email": siteConfig.email,
@@ -53,8 +53,8 @@ const Index = () => {
         <meta name="twitter:description" content={siteConfig.seo.description} />
         <link rel="canonical" href={window.location.origin} />
         <meta name="robots" content="index, follow" />
-        <meta name="geo.region" content="GR" />
-        <meta name="geo.placename" content="Αθήνα" />
+        <meta name="geo.region" content={siteConfig.country} />
+        <meta name="geo.placename" content={siteConfig.city} />
         <html lang="el" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
